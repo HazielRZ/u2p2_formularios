@@ -2,15 +2,9 @@ import javax.swing.*;
 
 void main() {
 
-
-
-        JFrame studentform = new JFrame("Form de Alumos");
-        JFrame.setDefaultLookAndFeelDecorated(true);
-        studentform.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        studentform.setContentPane(new JPanel());
-        studentform.pack();
-        studentform.setVisible(true);
-
-
-
+    SwingUtilities.invokeLater(() -> {
+        studentForm frame = new studentForm();
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+    });
 }
